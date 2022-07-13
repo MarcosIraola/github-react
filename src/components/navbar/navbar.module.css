@@ -1,0 +1,36 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    max-width: 260px;
+    background-color: #262b40;
+}
+
+.logo {
+    width: 40px;
+    margin: 20px 0px 5px 15px;
+}
+
+.ulist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ulist li {
+    background-color: #2e3650;
+    width: 75%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0.0625rem solid #4c5680;
+    transition: all 0.2s ease-in;
+}
+
+.ulist a{
+    color: white;
+    text-decoration: none;
+}
+
+.ulist li:hover {
+    background-color: #4c5680;
+}
