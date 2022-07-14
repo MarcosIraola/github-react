@@ -8,7 +8,8 @@
         "name": "Nombre",
         "company": "Empresa",
         "location": "Ubicación",
-        "public_repos": "Repos públicos"
+        "public_repos": "Repos públicos",
+        "bio": "Bio"
     },
     "repos_card": {
         "branch": "Rama",
