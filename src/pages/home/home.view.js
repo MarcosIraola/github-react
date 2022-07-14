@@ -1,14 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import styles from './home.module.css';
 import ListProjectsCard from '../../components/listProjectsCard/listProjectsCard.view';
+import { API_URL } from '../../routes/routes';
+import { Skeleton } from 'antd';
+import 'antd/dist/antd.css';
+import { useTranslation } from 'react-i18next';
+
 
 const Home = () => {
 
+    const { t } = useTranslation();
+
     const [user, setUser] = useState(null);
-    const [repos, setRepos] = useState();
+    const [repos, setRepos] = useState(null);
+
+    // const [githubUser, setGithubUser] = useState(API_URL);
+    // console.log(githubUser);
 
     useEffect(() => {
-        const url = "https://api.github.com/users/marcosiraola";
+        const url = API_URL;
         const options = {
             method: 'GET',
             headers: new Headers()
@@ -29,7 +39,7 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        const url = "https://api.github.com/users/marcosiraola/repos";
+        const url = API_URL + "/repos";
         const options = {
             method: 'GET',
             headers: new Headers()
@@ -43,7 +53,6 @@ const Home = () => {
             return Promise.reject(response.status)
         })
         .then(payload => {
-            console.log(payload[0])
             setRepos(payload)
         })
         .catch(error => console.log(error))
@@ -51,21 +60,26 @@ const Home = () => {
     }, []);
     
     return (
-        
         <div className={styles.home}>
-            <p className={styles.title}>Projects</p>
+            <p className={styles.title}>{ t('home.title') }</p>
+
             <div className={styles.user_container}>
-                <p>Name: {user?.name}</p>
-                <p>Company: {user?.company}</p>
-                <p>Location: {user?.location}</p>
-                <p>Public repos: {user?.public_repos}</p>
+                {user === null ?
+                    <Skeleton className={styles.skeleton} active />
+                    :
+                    <>
+                        <p>{ t('home.name') }: { user?.name }</p>
+                        <p>{ t('home.company') }: { user?.company }</p>
+                        <p>{ t('home.location') }: { user?.location }</p>
+                        <p>{ t('home.public_repos') }: { user?.public_repos }</p>
+                    </>
+                }
             </div>
 
             <div className={styles.repos_container}>
                 <ListProjectsCard repos={ repos }/>
             </div>
         </div>
-
     )
 }
 

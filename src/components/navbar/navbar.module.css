@@ -23,7 +23,7 @@
     padding: 10px;
     border-radius: 8px;
     border: 0.0625rem solid #4c5680;
-    transition: all 0.2s ease-in;
+    transition: all 0.4s;
 }
 
 .ulist a{
@@ -32,5 +32,29 @@
 }
 
 .ulist li:hover {
+    background-color: #4c5680;
+    color: white;
+}
+
+.language_container {
+    width: 75%;
+    margin: 50px auto 0 auto;
+
+}
+
+.button, .button_active {
+    width: 50px;
+    height: 30px;
+    background-color: transparent;
+	color: white;
+    border-radius: 4px;
+    border: 0.0625rem solid #4c5680;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+    margin: 0 2px;
+}
+
+.button_active {
     background-color: #4c5680;
 }

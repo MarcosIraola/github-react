@@ -33,6 +33,13 @@
   flex-direction: row;
 }
 
+.web-div {
+  height: 100vh;
+  width: calc(100vw - 260px);
+  overflow-y: scroll;
+  margin: 0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

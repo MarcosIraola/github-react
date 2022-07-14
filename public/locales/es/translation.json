@@ -1,0 +1,19 @@
+{
+    "navbar": {
+        "sidebar_1": "Proyectos",
+        "sidebar_2": "Detalle"
+    },
+    "home": {
+        "title": "Proyectos",
+        "name": "Nombre",
+        "company": "Empresa",
+        "location": "Ubicación",
+        "public_repos": "Repos públicos"
+    },
+    "repos_card": {
+        "branch": "Rama",
+        "language": "Lenguaje",
+        "update": "Ult. modificación",
+        "goto": "Ir al repo"
+    }
+}

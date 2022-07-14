@@ -1,0 +1,19 @@
+{
+    "navbar": {
+        "sidebar_1": "Projects",
+        "sidebar_2": "Detail"
+    },
+    "home": {
+        "title": "Projects",
+        "name": "Name",
+        "company": "Company",
+        "location": "Location",
+        "public_repos": "Public repos"
+    },
+    "repos_card": {
+        "branch": "Branch",
+        "language": "Language",
+        "update": "Last update",
+        "goto": "Go to repo"
+    }
+}

@@ -19,3 +19,11 @@
     font-weight: bold;
 }
 
+.url {
+    background-color: #4a5073;
+    padding: 7px 10px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+}
+

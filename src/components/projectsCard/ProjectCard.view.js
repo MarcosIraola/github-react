@@ -1,17 +1,19 @@
 import React from 'react';
 import styles from './projectCard.module.css';
+import { useTranslation } from 'react-i18next';
 
 const ProjectCard = ( props ) => {
-    return (
 
+    const { t } = useTranslation();
+
+    return (
         <div className={styles.container}>
             <p className={styles.title}>{ props.repo }</p>
-            <p>Branch: { props.branch }</p>
-            <p>Language: { props.language }</p>
-            <p>Last update: { props.update }</p>
-            {/* <a href={props.url}>Go to</a> */}
+            <p>{ t('repos_card.branch') }: { props.branch }</p>
+            <p>{ t('repos_card.language') }: { props.language }</p>
+            <p>{ t('repos_card.update') }: { props.update }</p>
+            <a className={ styles.url } href={props.url}>{ t('repos_card.goto') }</a>
         </div>
-
     )
 }
 
