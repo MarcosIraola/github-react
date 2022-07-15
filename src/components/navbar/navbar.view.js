@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './navbar.module.css'
 import { Link } from "react-router-dom";
-import { HOME, DETAIL } from '../../routes/routes.js';
+import { HOME, DETAIL, USER } from '../../routes/routes.js';
 import logo from '../../assets/logo512.png';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
 
@@ -15,10 +15,11 @@ const Navbar = () => {
             <img src={logo} className={styles.logo} alt="react logo" />
             <ul className={styles.ulist}>
                 <Link to={HOME}>
-                    <li>{ t('navbar.sidebar_1') }</li>
+                    <li>{ t('navbar.projects') }</li>
                 </Link>
-                <Link to={DETAIL}>
-                    <li>{ t('navbar.sidebar_2') }</li>
+
+                <Link to={USER}>
+                    <li>{ t('navbar.user') }</li>
                 </Link>
             </ul>
             <div className={styles.language_container}>

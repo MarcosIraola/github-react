@@ -1,3 +1,7 @@
+.link {
+    margin: 10px;
+}
+
 .container {
     line-height: 1.5;
     padding: 1.25rem 1.5rem;
@@ -8,8 +12,13 @@
     width: 250px;
     max-width: 250px;
     min-width: 250px;
-    margin: 10px;
     overflow: hidden;
+    color: black !important;
+    transition: all 0.2s;
+}
+
+.container:hover {
+    box-shadow: 3px 3px 8px  rgba(0, 0, 0, 0.15);
 }
 
 .title {

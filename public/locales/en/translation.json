@@ -1,7 +1,8 @@
 {
     "navbar": {
-        "sidebar_1": "Projects",
-        "sidebar_2": "Detail"
+        "projects": "Projects",
+        "details": "Detail",
+        "user": "User"
     },
     "home": {
         "title": "Projects",
@@ -15,6 +16,7 @@
         "branch": "Branch",
         "language": "Language",
         "update": "Last update",
-        "goto": "Go to repo"
+        "goto": "Go to repo",
+        "details": "See details"
     }
 }

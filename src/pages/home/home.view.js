@@ -28,7 +28,12 @@ const Home = () => {
     const state = {
         options: {},
         series: [jsRepos, vueRepos, phpRepos, cssRepos, javaRepos, otherRepos],
-        labels: langs
+    }
+
+    const series = [jsRepos, vueRepos, phpRepos, cssRepos, javaRepos, otherRepos];
+
+    const options = {
+        labels: ['Javascript', 'Vue', 'PHP', 'CSS', 'Java', 'Others']
     }
 
     useEffect(() => {
@@ -71,7 +76,10 @@ const Home = () => {
             setRepos(payload);
             sumProjects(payload);
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            console.log(error)
+            setRepos([])
+        })
 
     }, []);
 
@@ -90,32 +98,32 @@ const Home = () => {
                 langs.push(props.language);
             }
 
-            if(repo.language == "JavaScript") {
+            if(repo.language === "JavaScript") {
                 js = js + 1;
                 setJsRepos(js);
             }
 
-            if(repo.language == "Vue") {
+            if(repo.language === "Vue") {
                 vue = vue + 1;
                 setVueRepos(vue);
             }
 
-            if(repo.language == "PHP") {
+            if(repo.language === "PHP") {
                 php = php + 1;
                 setPhpRepos(php);
             }
 
-            if(repo.language == "CSS") {
+            if(repo.language === "CSS") {
                 css = css + 1;
                 setCssRepos(css);
             }
 
-            if(repo.language == "Java") {
+            if(repo.language === "Java") {
                 java = java + 1;
                 setJavaRepos(java);
             }
 
-            if(repo.language == null) {
+            if(repo.language === null) {
                 other = other + 1;
                 setOtherRepos(other);
             }
@@ -140,7 +148,7 @@ const Home = () => {
                 }
             </div>
 
-            <Chart options={state.options} series={state.series} labels={state.labels} type="donut" width="380" />
+            <Chart options={options} series={series} type="donut" width="380" />
 
             <div className={styles.repos_container}>
                 <ListProjectsCard repos={ repos }/>

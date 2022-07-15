@@ -5,7 +5,7 @@ import { HOME } from '../../routes/routes.js';
 const detail = () => {
     return (
         <div>
-            <p>Detail</p>
+            <p>User</p>
         </div>
     )
 }
